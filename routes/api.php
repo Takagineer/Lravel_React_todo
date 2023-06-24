@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/**
+ * index1→tasksにアクセス
+ * index2→コントローラーの指定
+ */
+Route::apiResource('tasks', 'TaskController');
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
